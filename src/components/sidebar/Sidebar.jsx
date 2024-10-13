@@ -9,6 +9,7 @@ const sidebar = () => {
 
   const handleClose = () => {
     setOpen(false);
+    setIsOpen(false);
   };
 
   const variants ={
@@ -48,6 +49,8 @@ const sidebar = () => {
       }      
     }
   }
+  
+  const toggleButtonImage = open ? "/plus.png" : "/menu-burger.png";
 
   return (
     <motion.div className="sidebar flex flex-col content-center justify-center text-black"
@@ -62,7 +65,7 @@ const sidebar = () => {
                     >
            <Links />
         </motion.div>
-        <Togglebutton setOpen={setOpen} />
+      <Togglebutton setOpen={setOpen} imageSrc={toggleButtonImage} />
     </motion.div>
   )
 }

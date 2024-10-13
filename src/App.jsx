@@ -8,7 +8,7 @@ import Portfolio from './components/portfolio/Portfolio.jsx'
 import Contact from "./components/contact/Contact.jsx"
 
 function App() {
-  return (
+  return (  
     <>
       <div className='portfolio'>
         <section id='Homepage' className='homepage'>

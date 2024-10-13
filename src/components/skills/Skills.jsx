@@ -31,7 +31,7 @@ const Skills = () => {
       </div>
       <div className="wrapper w-full h-full content-center justify-center z-[999]">
         <div className="head w-full h-24 content-center justify-center text-center">
-          <motion.h1 className="text-4xl z-[999] font-bold" initial={{ opacity: 0 }} whileInView={{opacity:1}} transition={{duration:0.6,}}>What I do.</motion.h1>
+          <motion.h1 className="text-4xl z-[999] font-bold" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6, }}>Tools I have Used ✅</motion.h1>
         </div>
         <div className="skill-list h-[calc(100vh-96px)] w-full flex flex-row justify-center content-center m-auto max-w-[1366px]">
           <div className="programming w-1/2 h-full m-auto">

@@ -6,21 +6,21 @@ import { useRef, createContext, useContext, useState } from "react"
 const items = [
     {
         id: 1,
-        image: "/projectimage.jpg",
-        title: "Project 1",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam nesciunt tempora iusto reprehenderit eos, vitae quaerat natus harum et hic, architecto sed eligendi non. Nobis quidem tempore unde pariatur saepe.",
+        image: "/project1.jpg",
+        title: "Facial Emotion Detection using ML",
+        description: "A facial emotion recognition model was developed using AlexNet and Kaggle’s Face Emotions Dataset. The Haar-cascade classifier with OpenCV was utilized for face detection. The model was tested on images, videos, and live video input, demonstrating its usability across various formats.",
     },
     {
         id: 2,
-        image: "/projectimage.jpg",
-        title: "Project 2",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam nesciunt tempora iusto reprehenderit eos, vitae quaerat natus harum et hic, architecto sed eligendi non. Nobis quidem tempore unde pariatur saepe.",
+        image: "/project2.png",
+        title: "Sentiment Analysis",
+        description: "A sentiment analysis model was developed to classify text into positive, negative, or neutral categories. Trained on a labeled dataset, the model was tested on social media posts and product reviews, demonstrating its effectiveness in identifying sentiment across different text formats.",
     },
     {
         id: 3,
-        image: "/projectimage.jpg",
-        title: "Project 3",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam nesciunt tempora iusto reprehenderit eos, vitae quaerat natus harum et hic, architecto sed eligendi non. Nobis quidem tempore unde pariatur saepe.",
+        image: "/project3.jpg",
+        title: "Star Constellation Detection using Machine Learning",
+        description: "Star Constellation Detection is a web app that identifies constellations from image inputs, either uploaded by the user or captured in real-time. Built with Flask, HTML, and machine learning algorithms, it accurately detects star patterns, making it a useful tool for astronomy enthusiasts.",
     }
 ]
 
@@ -75,8 +75,8 @@ const Single = ({ item }) => {
                         <h2 className="text-4xl font-semibold w-full" >{item.title}</h2>
                         <p className="text-gray-200 text-lg w-full">{item.description}</p>
                         <div className="button w-full gap-2 font-medium flex flex-row">
-                            <button className="w-1/4">Source Code</button>
-                            <button className="w-1/4">See Demo</button>
+                            {/* <button className="w-1/4">Source Code</button>
+                            <button className="w-1/4">See Demo</button> */}
                         </div>
                     </motion.div>
                 </div>
@@ -123,21 +123,21 @@ const Portfolio = () => {
     return (
         <div className="portfolio relative w-full" ref={ref}>
             <div className="progress sticky top-0 left-0 h-28 w-full p-auto text-center justify-center content-center text-3xl font-bold">
-                <h1 className="top-0 left-0 h-24 p-auto text-center justify-center content-center">Projects</h1>
+                <h1 className="top-0 left-0 h-24 p-auto text-center justify-center content-center">Projects ⚙️</h1>
                 <motion.div style={{ scaleX: scaleX }} className="progressBar w-full h-[6px] bg-[aliceblue]"></motion.div>
             </div>
             {items.map(item => (
                 <Single item={item} key={item.id} />
             ))}
-            <section className="otherProjects w-full">
+            {/* <section className="otherProjects w-full">
                 <div className="container w-full h-28"></div>
-                <h1 className="w-full text-center font-semibold text-2xl h-12">Others that you might want to look into.</h1>
+                <h1 className="w-full text-center font-semibold text-2xl h-12">Others that you might want to look into.(STILL WORKING ON THIS PAGE)</h1>
                 <div className="wrapper flex flex-wrap max-w-[1366px] m-auto h-[calc(100%-7rem-3rem-3rem)]">
                     {otheritems.map(item => (
                         <OtherSingle item={item} key={item.id} />
                     ))}
                 </div>
-            </section>
+            </section> */}
         </div>
     )
 }

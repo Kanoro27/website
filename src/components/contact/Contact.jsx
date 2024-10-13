@@ -1,18 +1,18 @@
 import "./contact.css"
-import {motion,useInView} from "framer-motion"
+import { motion, useInView } from "framer-motion"
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 
-const variants  = {
+const variants = {
     initial: {
-        y:500,
-        opacity:0
+        y: 500,
+        opacity: 0
     },
     animate: {
-        y:0,
-        opacity:1,
-        transition:{
-            duration:0.5,
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.5,
             staggerChildren: 0.1,
         }
     }
@@ -24,7 +24,7 @@ const Contact = () => {
     const ref = useRef();
     const formRef = useRef()
     const isInView = useInView(ref, { margin: "-100px" });
-    const [error,setError] = useState(false)
+    const [error, setError] = useState(false)
     const [success, setSuccess] = useState(false)
 
     const sendEmail = (e) => {
@@ -45,33 +45,33 @@ const Contact = () => {
                     setError(true);
                 },
             );
-        
+
     };
 
-  return (
-      <motion.div className="contact w-full h-full" ref={ref} variants={variants} initial="initial" whileInView="animate">
-          <motion.div className="container w-full h-full flex flex-row max-w-[1366px] m-auto" variants={variants} initial="initial" whileInView="animate">
-              <motion.div className="textArea w-1/2 h-full m-auto flex flex-col gap-12 justify-center content-center" variants={variants} initial="initial" whileInView="animate">
+    return (
+        <motion.div className="contact w-full h-full" ref={ref} variants={variants} initial="initial" whileInView="animate">
+            <motion.div className="container w-full h-full flex flex-row max-w-[1366px] m-auto" variants={variants} initial="initial" whileInView="animate">
+                <motion.div className="textArea w-1/2 h-full m-auto flex flex-col gap-12 justify-center content-center" variants={variants} initial="initial" whileInView="animate">
                     <h1 className="text-8xl font-extrabold">
-                        Let's work <br /> 
+                        Let's work <br />
                         <span>Together!</span>
                     </h1>
-                  <motion.div className="mail" variants={variants}>
-                        <p className="font-bold">Email</p>
+                    <motion.div className="mail" variants={variants}>
+                        <p className="font-bold">📧 Email</p>
                         <span>spraveenkviisc2003@gmail.com</span>
-                  </motion.div>
-                  <motion.div className="address" variants={variants}>
-                        <p className="font-bold">Address</p>
+                    </motion.div>
+                    <motion.div className="address" variants={variants}>
+                        <p className="font-bold">📍 Address</p>
                         <span>Bhadrappa Layout, Bengaluru, India</span>
-                  </motion.div>
-                  <motion.div className="phone" variants={variants}>
-                      <p className="font-bold">Phone</p>
+                    </motion.div>
+                    <motion.div className="phone" variants={variants}>
+                        <p className="font-bold">📞 Phone</p>
                         <span>+91 90368 21503</span>
-                  </motion.div>
-              </motion.div>
-              <div variants={variants} className="formArea w-1/2 h-full m-auto justify-center content-center">
+                    </motion.div>
+                </motion.div>
+                <div variants={variants} className="formArea w-1/2 h-full m-auto justify-center content-center">
                     <motion.div className="phoneSvg" initial={{ opacity: 1 }}
-                            whileInView={{ opacity: 0 }} transition={{ delay: 1.5, duration: 1 }}>
+                        whileInView={{ opacity: 0 }} transition={{ delay: 1.5, duration: 1 }}>
                         <svg width="450px" height="450" viewBox="0 0 32.666 32.666">
                             <motion.path
                                 strokeWidth={0.2}
@@ -94,19 +94,19 @@ const Contact = () => {
                                 C32.666,7.326,25.339,0,16.333,0z"/>
                         </svg>
                     </motion.div>
-                  <motion.form className="flex flex-col gap-6 z-[10]" ref={formRef} onSubmit={sendEmail} initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }} transition={{ delay: 2, duration: 1 }} >
-                        <input type="text" required placeholder="Name" name="name"/>
-                        <input type="email" required placeholder="Email" name="email"/>
-                        <textarea rows={8} placeholder="Message" name="message"/>
-                      <button className="font-semibold" type="submit" value="Send">Submit</button>
+                    <motion.form className="flex flex-col gap-6 z-[10]" ref={formRef} onSubmit={sendEmail} initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} transition={{ delay: 2, duration: 1 }} >
+                        <input type="text" required placeholder="Name" name="name" />
+                        <input type="email" required placeholder="Email" name="email" />
+                        <textarea rows={8} placeholder="Message" name="message" />
+                        <button className="font-semibold" type="submit" value="Send">Submit</button>
                         {error && "Error, Please Try Again"}
                         {success && "I received your mail!"}
                     </motion.form>
-              </div>
-          </motion.div>
-      </motion.div>
-  )
+                </div>
+            </motion.div>
+        </motion.div>
+    )
 }
 
 export default Contact

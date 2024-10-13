@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.parallax{
+    background:linear-gradient(180deg,#030214, #00096b);
+    .mountains{
+        background-image: url("/mountains.png");
+        background-size: cover; 
+        background-position: bottom; 
+    }
+    .planets {
+        background-image: url("/planets.png");
+        background-size: cover;
+        background-position:center;
+    }
+    .stars {
+        background-image: url("/stars.png");
+        background-size: cover;
+        background-position: bottom;
+        scale: 1.5;
+    }
+}

@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar{
+    background: transparent;
+    a{
+        img:hover{
+           transform: scale(1.2); 
+        }
+    }
+}
+
+
+

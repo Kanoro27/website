@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.portfolio{
+    .progress{
+        color: rgb(255, 182, 46);
+
+        h1{
+
+        }
+        .progressBar{
+
+        }
+    }
+
+    section{
+        .container{
+            .wrapper{
+                .imageContainer{
+                    img{
+                        border-radius: 25px;
+                    }
+                }
+                .textContainer{
+                    h2{
+
+                    }
+                    p{
+
+                    }
+                    .button{
+                        button {
+                                background:linear-gradient(45deg, orange,#ffb62e);
+                                color: #0d1321;
+                                border: none;
+                                border-radius: 5px;
+                                padding:2px;
+                            }
+                    }
+                }
+            }
+        }
+    }
+    
+    .otherProjects{
+        .container{
+
+        }
+        h1{
+
+        }
+        .wrapper{
+            .projectContainer{             
+                .imageContainer{
+                    
+                    
+                    img{
+                        border-radius: 25px;
+                        border: none;
+                    }
+                }
+                .textContainer{
+                    p{
+
+                    }
+                }
+                .button{
+                    button {
+                        background: linear-gradient(45deg, orange, #ffb62e);
+                        color: #0d1321;
+                        border: none;
+                        border-radius: 5px;
+                        padding: 2px;
+                    }
+                }
+            }
+
+            .projectContainer:hover {
+                scale: 1.2;
+                transition: 0.1;
+                backdrop-filter: blur(5px);
+                background-color: rgba(240, 248, 255, 0.068);
+                border: none;
+                border-radius: 20px;
+            }
+
+        }
+    }
+}

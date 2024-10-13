@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.skills{    
+    background: transparent;
+    color: aliceblue;
+    .wrapper{
+        .skill-list{
+            .programming{
+                .program-skills{
+                    .container{
+                        img{
+                            padding: 7px;
+                            background: rgb(240, 248, 255);
+                            border: none;
+                            border-radius: 15px;
+                        }
+                    }
+                }
+            } 
+            .machinelearning{
+                .program-skills{
+                    .container{
+                        img{
+                            padding: 7px;
+                                background: aliceblue;
+                                border: none;
+                                border-radius: 15px;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+

@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero {
+    height: calc(100vh - 96px);    
+    .wrapper{
+        max-width: 1366px;
+        .textContainer {
+            h2 {
+                letter-spacing: 5px;    
+                background-image: linear-gradient(to right, #007bff, #00ffff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                opacity: 0;
+                transition: 0.3s ease-in-out;
+            }
+
+            h2:hover{
+                opacity: 1;
+                text-shadow: 0 0 5px rgba(0, 255, 255, 0.4), 0 0 10px rgba(0, 255, 255, 0.3), 0 0 15px rgba(0, 255, 255, 0.2);
+            }
+            .buttons{
+                button{
+                    padding:18px;
+                    border: 2px solid aliceblue ;
+                    border-radius:20px ;
+                    margin-right: 10px;
+                    cursor:pointer;
+                    z-index: 10;
+                    opacity: 0;
+                    transition: 0.3s ease-in-out;
+                }
+
+                button:hover{
+                    background-color: rgb(88, 88, 88);  
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    
+    .slidingTextContainer{
+        height: 100%;
+        font-size: 25vh;
+        white-space: nowrap;
+        z-index: -1;
+        span{
+            white-space: nowrap;
+            -webkit-user-select: none;
+            background-image: linear-gradient(-45deg, #007bff23, rgba(7, 255, 255, 0.077));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+    }
+    .imageContainer{
+        img{
+            filter:sepia(1) hue-rotate(-210deg);
+        }
+        
+    }
+}
